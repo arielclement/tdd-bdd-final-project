@@ -81,7 +81,7 @@ Scenario: Delete a Product
     And I set the "Name" to "Big Mac"
     And I press the "Search" button
     Then I should see the message "Success"
-    And I should see "1/4 lb burger" in "Description field
+    And I should see "1/4 lb burger" in the "Description" field
     When I copy the "Id" field
     And I press the "Clear" button
     And I paste the "Id" field
@@ -116,7 +116,7 @@ Scenario: Search by category
 Scenario: Search by available
     When I visit the "Home Page"
     And I press the "Clear" button
-    And I should see "True" in the "Available" dropdown
+    And I select "True" in the "Available" dropdown
     And I press the "Search" button
     Then I should see the message "Success"
     And I should see "Hat" in the results
